@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#calcu-image{
+    background-image: url("./calcuu.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.calculator{
+    margin-top: 20px;
+    border: 2.5px solid black;
+    height: 600px;
+    width: 500px;
+    margin-left: 100px;
+    background-color:#DFE8ED;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+}
+
+button{
+    padding: 15px;
+    width: 80px;
+    font-size: 28px;
+    margin-left: 28px;
+    margin-top: 28px;
+    background-color: rgba(0, 0, 0, 0.507);
+    background-color:black;
+    border: 1px solid black;
+    color: white;
+    box-shadow: 10px 10px #DFE8ED;
+}
+input{
+    padding: 30px;
+    margin-top: 7px;
+    width: 440px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#res{
+    position: absolute;
+    top: 55px;
+    left: 470px;
+}
+
+#usernum{
+    font-size: 30px;
+}

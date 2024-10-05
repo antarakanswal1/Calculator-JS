@@ -5,62 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        #calcu-image{
-            background-image: url("./calcuu.jpeg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .calculator{
-            margin-top: 20px;
-            border: 2.5px solid black;
-            height: 600px;
-            width: 500px;
-            margin-left: 100px;
-            background-color:#DFE8ED;
-            padding: 20px;
-            border: 1px solid black;
-            border-radius: 10px;
-            box-shadow: 10px 10px 10px black;
-        }
-
-        button{
-            padding: 15px;
-            width: 80px;
-            font-size: 28px;
-            margin-left: 28px;
-            margin-top: 28px;
-            background-color: rgba(0, 0, 0, 0.507);
-            background-color:black;
-            border: 1px solid black;
-            color: white;
-            box-shadow: 10px 10px #DFE8ED;
-        }
-        input{
-            padding: 30px;
-            margin-top: 7px;
-            width: 440px;
-            border-radius: 5px;
-            margin-left: 10px;
-        }
-
-        #res{
-            position: absolute;
-            top: 55px;
-            left: 470px;
-        }
-
-        #usernum{
-            font-size: 30px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body id="calcu-image">
     <div class="calculator">
-            <input type="number" id="usernum">
+            <input type="text" id="usernum">
             <br>
             <div class="button-grid">
             <button type="button" onclick="num7()">7</button>
@@ -86,132 +35,7 @@
     </div>
 
     <h2 id="res"></h2>
-
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-        var ext="",n1,n2,rs,op;
-        function num1()
-        {
-            document.getElementById("usernum").value=ext+="1";
-        }
-
-        function num2()
-        {
-            document.getElementById("usernum").value=ext+="2";
-        }
-
-        function num3()
-        {
-            document.getElementById("usernum").value=ext+="3";
-        }
-
-        function num4()
-        {
-            document.getElementById("usernum").value=ext+="4";
-        }
-
-        function num5()
-        {
-            document.getElementById("usernum").value=ext+="5";
-        }
-
-        function num6()
-        {
-            document.getElementById("usernum").value=ext+="6";
-        }
-
-        function num7()
-        {
-            document.getElementById("usernum").value=ext+="7";
-        }
-
-        function num8()
-        {
-            document.getElementById("usernum").value=ext+="8";
-        }
-
-        function num9()
-        {
-            document.getElementById("usernum").value=ext+="9";
-        }
-
-        function num0()
-        {
-            document.getElementById("usernum").value=ext+="0";
-        }
-
-        function numd()
-        {
-            document.getElementById("usernum").value=ext+=".";
-        }
-
-        function plus()
-        {
-            n1=document.getElementById("usernum").value;
-            document.getElementById("usernum").value="";
-            ext="";
-            op="+";
-        }
-
-        function minus()
-        {
-            n1=document.getElementById("usernum").value;
-            document.getElementById("usernum").value="";
-            ext="";
-            op="-";
-        }
-
-        function multi()
-        {
-            n1=document.getElementById("usernum").value;
-            document.getElementById("usernum").value="";
-            ext="";
-            op="*";
-        }
-
-        function divide()
-        {
-            n1=document.getElementById("usernum").value;
-            document.getElementById("usernum").value="";
-            ext="";
-            op="/";
-        }
-
-        function result()
-        {
-            if(op=="+")
-            {
-                n2=document.getElementById("usernum").value;
-                rs=parseInt(n1)+parseInt(n2);
-                document.getElementById("usernum").value=rs;
-                ext="";
-            }
-
-            else if(op=="-")
-            {
-                n2=document.getElementById("usernum").value;
-                rs=parseInt(n1)-parseInt(n2);
-                document.getElementById("usernum").value=rs;
-                ext="";
-            }
-
-            else if(op=="*")
-            {
-                n2=document.getElementById("usernum").value;
-                rs=parseInt(n1)*parseInt(n2);
-                document.getElementById("usernum").value=rs;
-                ext="";
-            }
-
-            else if(op=="/")
-            {
-                n2=document.getElementById("usernum").value;
-                rs=parseInt(n1)/parseInt(n2);
-                document.getElementById("usernum").value=rs;
-                ext="";
-            }
-            document.getElementById("res").innerHTML=(n1+ " "+ op+ " "+n2);
-        }
-    </script>
 </body>
 </html>
